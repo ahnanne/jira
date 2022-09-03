@@ -9,6 +9,13 @@ jobs:
   link_jira_issue:
     runs-on: ubuntu-latest
     steps:
+      - name: Jira Login
+        uses: atlassian/gajira-login@v2.0.0
+        env:
+          JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
+          JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+
       - name: Find Jira Issue
         uses: atlassian/gajira-find-issue-key@master
         with:
