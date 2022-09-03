@@ -10,10 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Find Jira Issue
-        uses: cybervoid/gajira-get-issue@v1.1
-        id: find
+        uses: atlassian/gajira-find-issue-key@master
         with:
-          input-text: ${{ github.head_ref }}
+          from: branch
 
       - name: Update PR body
         uses: AsasInnab/pr-body-action@v1
