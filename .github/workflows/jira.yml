@@ -26,5 +26,5 @@ jobs:
         uses: AsasInnab/pr-body-action@v1
         if: steps.find.outputs.issue != ''
         with:
-          body: "[${{ steps.find.outputs.issue }}](${{ secrets.JIRA_BASE_URL }}/browse/${{ steps.find.outputs.issue }})\n${{ github.event.pull_request.body }}"
+          body: "**🎟 Jira issue** [${{ steps.find.outputs.issue }}](${{ secrets.JIRA_BASE_URL }}/browse/${{ steps.find.outputs.issue }})\n\n${{ github.event.pull_request.body }}"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
