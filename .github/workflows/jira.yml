@@ -3,7 +3,7 @@ name: Link Jira issue key in PR
 
 on: 
   pull_request:
-    types: [opened]
+    types: [ opened ]
 
 jobs:
   link_jira_issue:
