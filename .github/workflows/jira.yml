@@ -18,6 +18,7 @@ jobs:
 
       - name: Find Jira Issue
         uses: atlassian/gajira-find-issue-key@master
+        id: find
         with:
           string: ${{ github.head_ref }}
 
