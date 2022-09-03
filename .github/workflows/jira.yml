@@ -19,7 +19,6 @@ jobs:
       - name: Find Jira Issue
         uses: atlassian/gajira-find-issue-key@master
         with:
-          from: branch
           string: ${{ github.event.ref }}
 
       - name: Update PR body
