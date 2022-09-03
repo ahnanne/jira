@@ -20,6 +20,7 @@ jobs:
         uses: atlassian/gajira-find-issue-key@master
         with:
           string: ${{ github.event.ref }}
+          from: branch
 
       - name: Update PR body
         uses: AsasInnab/pr-body-action@v1
