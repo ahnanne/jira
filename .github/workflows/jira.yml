@@ -3,7 +3,7 @@ name: Link Jira issue key in PR
 
 on: 
   pull_request:
-    types: [ opened ]
+    types: [opened]
 
 jobs:
   link_jira_issue:
@@ -19,8 +19,7 @@ jobs:
       - name: Find Jira Issue
         uses: atlassian/gajira-find-issue-key@master
         with:
-          string: ${{ github.event.ref }}
-          from: branch
+          string: ${{ github.head_ref }}
 
       - name: Update PR body
         uses: AsasInnab/pr-body-action@v1
