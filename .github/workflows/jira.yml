@@ -20,7 +20,7 @@ jobs:
         uses: atlassian/gajira-find-issue-key@master
         id: find
         with:
-          from: commits
+          string: ${{ github.event.commits.map(c=>c.message).join(' ') }}
 
       - name: Update PR body
         uses: AsasInnab/pr-body-action@v1
